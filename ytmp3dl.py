@@ -5,26 +5,6 @@ import requests, os, sys, json, re, time
 from sys import platform
 from prettytable import PrettyTable
 
-class banner:
-    header = """
-YT Audio Downloader by Macs
-
-[!] WARNING: Use of this tool may be illegal but it is not meant for that use,
-If you use it for Illegal purposes I am not responsible for any concequences that come your way.[!]
-
-No Need To Find A Link Do It All From The Command Line!
-
-Simply search what ever video you want to download. Find it on the results. Pick the number and BOOM
-Ez Pz Downloads in whatever audio format you'd like :)
-
-Credits:
-
-S0n1c for the great minitube API
-Yak for helping out when I was confused
-Cipher for the color compatibility on other systems than Linux
-Google for making Youtube
-shubhamaggarwal on GitHub for inspiration
-""" + '\033[91m' + """[*] FILES WILL BE SAVED TO THE SAME DIRECTORY AS THE SCRIPT [*]"""
 
 if platform == "linux" or platform == "linux2":
     class color:
@@ -59,6 +39,27 @@ elif platform == "darwin":
         RED = ''
         BOLD = ''
         END = ''
+
+class banner:
+    header = """
+YT Audio Downloader by Macs
+
+[!] WARNING: Use of this tool may be illegal but it is not meant for that use,
+If you use it for Illegal purposes I am not responsible for any concequences that come your way.[!]
+
+No Need To Find A Link Do It All From The Command Line!
+
+Simply search what ever video you want to download. Find it on the results. Pick the number and BOOM
+Ez Pz Downloads in whatever audio format you'd like :)
+
+Credits:
+
+S0n1c for the great minitube API
+Yak for helping out when I was confused
+Cipher for the color compatibility on other systems than Linux
+Google for making Youtube
+shubhamaggarwal on GitHub for inspiration
+""" + '\033[91m' + """[*] FILES WILL BE SAVED TO THE SAME DIRECTORY AS THE SCRIPT [*]"""
 
 def scrape():
     print banner.header
